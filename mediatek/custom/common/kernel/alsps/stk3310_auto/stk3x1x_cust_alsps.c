@@ -53,35 +53,36 @@
 
 static struct alsps_hw cust_alsps_hw = {
 	/* i2c bus number, for mt657x, default=0. For mt6589, default=3 */
-#ifdef MT6589	
-    .i2c_num    = 3,
-#elif defined(MT6572)	
-    .i2c_num    = 1,
-#else	
-    .i2c_num    = 0,	
-#endif	
+#ifdef MT6589
+	.i2c_num    = 3,
+#elif defined(MT6572)
+	.i2c_num    = 1,
+#else
+	.i2c_num    = 0,
+#endif
 	//.polling_mode =1,
 	.polling_mode_ps =0,
 	.polling_mode_als =1,
-    .power_id   = MT65XX_POWER_NONE,    /*LDO is not used*/
-    .power_vol  = VOL_DEFAULT,          /*LDO is not used*/
-    .i2c_addr   = {0x90, 0x00, 0x00, 0x00},	/*STK3x1x*/
-    //.als_level  = {5,  9, 36, 59, 82, 132, 205, 273, 500, 845, 1136, 1545, 2364, 4655, 6982},	/* als_code */
-	  //.als_level  = {6, 12, 48, 78, 108, 174, 270, 360, 660, 1116, 1500, 2040, 3120, 6144, 9216},	/* als_code */
-	  .als_level  = {6, 12, 56, 78, 108, 174, 270, 360, 660, 1116, 1500, 2040, 3120, 6144, 9216},	/* als_code */
-    .als_value  = {0, 10, 40, 65, 90, 145, 225, 300, 550, 930, 1250, 1700, 2600, 5120, 7680, 10240},    /* lux */
-    //hal层处理:0/15/32/50/100/140/180/240/300/600/1000/2000/3000/4000/8000/10000 对应的背光原始值:30/40/50/60/70/80/102/102/102/102/102/180/200/210/230/255
-    //.als_level  =  {36, 59, 70, 82, 100, 132, 170, 205, 223, 245, 278,   500,  748,   1024, 1600 },	/* als_code */    
+	.power_id   = MT65XX_POWER_NONE,    /*LDO is not used*/
+	.power_vol  = VOL_DEFAULT,          /*LDO is not used*/
+	.i2c_addr   = {0x48, 0x00, 0x00, 0x00},	/*STK3x1x*/
+	//.als_level  = {5,  9, 36, 59, 82, 132, 205, 273, 500, 845, 1136, 1545, 2364, 4655, 6982},	/* als_code */
+	//.als_level  = {6, 12, 48, 78, 108, 174, 270, 360, 660, 1116, 1500, 2040, 3120, 6144, 9216},	/* als_code */
+	.als_level  = {6, 12, 56, 78, 108, 174, 270, 360, 660, 1116, 1500, 2040, 3120, 6144, 9216},	/* als_code */
+	.als_value  = {0, 13, 40, 90, 145, 225, 300, 550, 930, 1250, 1700, 2600, 3072, 5120, 7680, 10240},
+	//.als_value  = {0, 10, 40, 65, 90, 145, 225, 300, 550, 930, 1250, 1700, 2600, 5120, 7680, 10240},    /* lux */
+	//hal层处理:0/15/32/50/100/140/180/240/300/600/1000/2000/3000/4000/8000/10000 对应的背光原始值:30/40/50/60/70/80/102/102/102/102/102/180/200/210/230/255
+	//.als_level  = {36, 59, 70, 82, 100, 132, 170, 205, 223, 245, 278,   500,  748,   1024, 1600 },	/* als_code */
 	//.als_value  = {9,  13,  40, 80, 124, 160, 210, 270, 470, 824, 1580, 2600, 3072, 5120, 8192, 10240},  /* lux */// {0, 24, 40, 80, 124, 160, 210, 270, 470, 824, 1580, 2600, 3072, 5120, 8192, 10240},    /* lux */
 
-   	.state_val = 0x0,		/* disable all */
+	.state_val = 0x0,		/* disable all */
 	.psctrl_val = 0x30,		/* ps_persistance=4, ps_gain=64X, PS_IT=0.391ms */
 	.alsctrl_val = 0x2b,	/* als_persistance=1, als_gain=64X, ALS_IT=50ms */
 	.ledctrl_val = 0xFF,	/* 100mA IRDR, 64/64 LED duty */
 	.wait_val = 0x10,		/* 50 ms */
-    .ps_high_thd_val = 1700,
-    .ps_low_thd_val = 1500,
+	.ps_high_thd_val = 1700,
+	.ps_low_thd_val = 1500,
 };
 struct alsps_hw *stx3x1x_get_cust_alsps_hw(void) {
-    return &cust_alsps_hw;
+	return &cust_alsps_hw;
 }

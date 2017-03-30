@@ -96,7 +96,7 @@ CUSTOM_KERNEL_ACCELEROMETER=kxcjk_auto
 
 # ALSPS sensor driverto detect ambint light and the object is close or far awary from device
 #CUSTOM_KERNEL_ALSPS=stk3310_auto tmd2771_auto
-CUSTOM_KERNEL_ALSPS=stk3k1x
+CUSTOM_KERNEL_ALSPS=stk3310_auto
 
 # Pressure sensor driver to detect pressure
 CUSTOM_KERNEL_BAROMETER=
@@ -177,7 +177,8 @@ CUSTOM_KERNEL_SUB_IMGSENSOR=hi704_yuv
 CUSTOM_KERNEL_SUB_LENS=dummy_lens
 
 # touch driver  need to report correct touch axes
-CUSTOM_KERNEL_TOUCHPANEL=ft6206_wvga_v815w GT9XX_hotknot_M402A
+#CUSTOM_KERNEL_TOUCHPANEL=ft6206_wvga_v815w GT9XX_hotknot_M402A
+CUSTOM_KERNEL_TOUCHPANEL=ft6206_wvga_v815w
 
 # Configuration for USB PHY
 CUSTOM_KERNEL_USB=mt6577
