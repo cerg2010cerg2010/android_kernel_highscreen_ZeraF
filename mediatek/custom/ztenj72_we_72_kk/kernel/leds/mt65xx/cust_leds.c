@@ -19,6 +19,13 @@
 #define GPIO_LCD_PULSE_CONTRL GPIO134
 #endif
 
+#define ERROR_BL_LEVEL 0xFFFFFFFF
+
+unsigned int brightness_mapping(unsigned int level)
+{
+	return ERROR_BL_LEVEL;
+}
+
 static int custom_disp_bls_set_backlight(unsigned int  value)
 {
         unsigned int brightness;
