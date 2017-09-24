@@ -1,0 +1,556 @@
+libshowlogo new path ------- platform/mediatek/mt6572/lk/../../../../bootable/bootloader/lk/lib/libshowlogo
+including app/mt_boot app/shell dev/keys dev/video lib/debug lib/heap lib/libc lib/libshowlogo lib/openssl lib/ptable lib/zlib out/lk
+including lib/console
+generating ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/system-onesegment.ld
+gcc -DMEMBASE=0x80020000  target/mediatek/tools/mkheader.c -o ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/mkheader
+generating ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/config.h
+compiling arch/arm/crt0.S
+compiling platform/mediatek/mt6572/lk/bitops.c
+compiling platform/mediatek/mt6572/lk/platform.c
+compiling platform/mediatek/mt6572/lk/pwm.c
+platform/mediatek/mt6572/lk/platform.c: In function 'dram_init':
+platform/mediatek/mt6572/lk/platform.c:593:5: warning: passing argument 2 of 'memcpy' makes pointer from integer without a cast [enabled by default]
+     memcpy(g_boot_arg, BOOT_ARGUMENT_LOCATION, sizeof(BOOT_ARGUMENT));
+     ^
+In file included from platform/mediatek/mt6572/lk/platform.c:43:0:
+include/string.h:35:7: note: expected 'const void *' but argument is of type 'unsigned int'
+ void *memcpy (void *, void const *, size_t);
+       ^
+platform/mediatek/mt6572/lk/platform.c: In function 'platform_init':
+platform/mediatek/mt6572/lk/platform.c:1029:6: warning: implicit declaration of function 'sec_usbdl_verify_da' [-Wimplicit-function-declaration]
+      if (sec_usbdl_verify_da(da_addr, (da_len - sig_len), sig_addr, sig_len)) {
+      ^
+platform/mediatek/mt6572/lk/platform.c: In function 'clk_init':
+platform/mediatek/mt6572/lk/platform.c:581:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+compiling platform/mediatek/mt6572/lk/uart.c
+compiling platform/mediatek/mt6572/lk/interrupts.c
+compiling platform/mediatek/mt6572/lk/timer.c
+compiling platform/mediatek/mt6572/lk/debug.c
+compiling platform/mediatek/mt6572/lk/mt_i2c.c
+compiling platform/mediatek/mt6572/lk/boot_mode.c
+compiling platform/mediatek/mt6572/lk/load_image.c
+compiling platform/mediatek/mt6572/lk/atags.c
+platform/mediatek/mt6572/lk/atags.c: In function 'target_atag_dfo':
+platform/mediatek/mt6572/lk/atags.c:221:10: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+   buffer = (unsigned char *)get_env("DFO");
+          ^
+platform/mediatek/mt6572/lk/atags.c:249:10: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+          tag_dfo_p->value[i] = atoi(tmp);
+          ^
+compiling platform/mediatek/mt6572/lk/mt_partition.c
+compiling platform/mediatek/mt6572/lk/addr_trans.c
+compiling platform/mediatek/mt6572/lk/mmc_common_inter.c
+compiling platform/mediatek/mt6572/lk/mmc_core.c
+compiling platform/mediatek/mt6572/lk/mmc_test.c
+compiling platform/mediatek/mt6572/lk/mmc_dbg.c
+compiling platform/mediatek/mt6572/lk/msdc.c
+compiling platform/mediatek/mt6572/lk/msdc_dma.c
+compiling platform/mediatek/mt6572/lk/msdc_irq.c
+compiling platform/mediatek/mt6572/lk/msdc_utils.c
+compiling platform/mediatek/mt6572/lk/pll.c
+compiling platform/mediatek/mt6572/lk/factory.c
+platform/mediatek/mt6572/lk/factory.c: In function 'factory_check_key_trigger':
+platform/mediatek/mt6572/lk/factory.c:21:2: warning: implicit declaration of function 'get_timer' [-Wimplicit-function-declaration]
+  ulong begin = get_timer(0);
+  ^
+platform/mediatek/mt6572/lk/factory.c: In function 'factory_detection':
+platform/mediatek/mt6572/lk/factory.c:48:9: warning: variable 'forbid_mode' set but not used [-Wunused-but-set-variable]
+     int forbid_mode = 0;
+         ^
+compiling platform/mediatek/mt6572/lk/mt_pmic.c
+compiling platform/mediatek/mt6572/lk/upmu_common.c
+compiling platform/mediatek/mt6572/lk/mt_gpt.c
+compiling platform/mediatek/mt6572/lk/mtk_sleep.c
+compiling platform/mediatek/mt6572/lk/mt_rtc.c
+compiling platform/mediatek/mt6572/lk/mt_usb.c
+compiling platform/mediatek/mt6572/lk/mtk_auxadc.c
+platform/mediatek/mt6572/lk/mtk_auxadc.c: In function 'IMM_GetOneChannelValue':
+platform/mediatek/mt6572/lk/mtk_auxadc.c:154:8: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+        printf("[adc_api]: wait for module idle\n");
+        ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c:155:8: warning: implicit declaration of function 'udelay' [-Wimplicit-function-declaration]
+        udelay(100000);
+        ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c: In function 'IMM_auxadc_get_evrage_data':
+platform/mediatek/mt6572/lk/mtk_auxadc.c:270:27: warning: variable 'ret_value' set but not used [-Wunused-but-set-variable]
+  int ret = 0, data[4], i, ret_value = 0, ret_temp = 0;
+                           ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c: At top level:
+platform/mediatek/mt6572/lk/mtk_auxadc.c:67:12: warning: 'g_o_vts' defined but not used [-Wunused-variable]
+ static int g_o_vts = 0;
+            ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c:69:12: warning: 'g_degc_cali' defined but not used [-Wunused-variable]
+ static int g_degc_cali = 0;
+            ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c:70:12: warning: 'g_adc_cali_en' defined but not used [-Wunused-variable]
+ static int g_adc_cali_en = 0;
+            ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c:71:12: warning: 'g_o_vts_abb' defined but not used [-Wunused-variable]
+ static int g_o_vts_abb = 0;
+            ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c:72:12: warning: 'g_o_slope' defined but not used [-Wunused-variable]
+ static int g_o_slope = 0;
+            ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c:73:12: warning: 'g_o_slope_sign' defined but not used [-Wunused-variable]
+ static int g_o_slope_sign = 0;
+            ^
+platform/mediatek/mt6572/lk/mtk_auxadc.c:74:12: warning: 'g_id' defined but not used [-Wunused-variable]
+ static int g_id = 0;
+            ^
+compiling platform/mediatek/mt6572/lk/mtk_key.c
+compiling platform/mediatek/mt6572/lk/mt_disp_drv.c
+compiling platform/mediatek/mt6572/lk/disp_drv.c
+compiling platform/mediatek/mt6572/lk/disp_assert_layer.c
+platform/mediatek/mt6572/lk/disp_assert_layer.c:513:1: warning: data definition has no type or storage class [enabled by default]
+ EXPORT_SYMBOL(DAL_SetColor);
+ ^
+platform/mediatek/mt6572/lk/disp_assert_layer.c:513:1: warning: type defaults to 'int' in declaration of 'EXPORT_SYMBOL' [enabled by default]
+platform/mediatek/mt6572/lk/disp_assert_layer.c:513:1: warning: parameter names (without types) in function declaration [enabled by default]
+platform/mediatek/mt6572/lk/disp_assert_layer.c:514:1: warning: data definition has no type or storage class [enabled by default]
+ EXPORT_SYMBOL(DAL_Printf);
+ ^
+platform/mediatek/mt6572/lk/disp_assert_layer.c:514:1: warning: type defaults to 'int' in declaration of 'EXPORT_SYMBOL' [enabled by default]
+platform/mediatek/mt6572/lk/disp_assert_layer.c:514:1: warning: parameter names (without types) in function declaration [enabled by default]
+platform/mediatek/mt6572/lk/disp_assert_layer.c:515:1: warning: data definition has no type or storage class [enabled by default]
+ EXPORT_SYMBOL(DAL_Clean);
+ ^
+platform/mediatek/mt6572/lk/disp_assert_layer.c:515:1: warning: type defaults to 'int' in declaration of 'EXPORT_SYMBOL' [enabled by default]
+platform/mediatek/mt6572/lk/disp_assert_layer.c:515:1: warning: parameter names (without types) in function declaration [enabled by default]
+compiling platform/mediatek/mt6572/lk/disp_drv_dbi.c
+compiling platform/mediatek/mt6572/lk/disp_drv_dpi.c
+compiling platform/mediatek/mt6572/lk/disp_drv_dsi.c
+compiling platform/mediatek/mt6572/lk/lcd_drv.c
+compiling platform/mediatek/mt6572/lk/dpi_drv.c
+compiling platform/mediatek/mt6572/lk/dsi_drv.c
+compiling platform/mediatek/mt6572/lk/partition_mt.c
+compiling platform/mediatek/mt6572/lk/mt_get_dl_info.c
+compiling platform/mediatek/mt6572/lk/mtk_wdt.c
+compiling platform/mediatek/mt6572/lk/mt_leds.c
+compiling platform/mediatek/mt6572/lk/recovery.c
+compiling platform/mediatek/mt6572/lk/meta.c
+compiling platform/mediatek/mt6572/lk/mt_logo.c
+compiling platform/mediatek/mt6572/lk/mt_gpio.c
+compiling platform/mediatek/mt6572/lk/mt_gpio_init.c
+compiling platform/mediatek/mt6572/lk/boot_mode_menu.c
+compiling platform/mediatek/mt6572/lk/mt_pmic_wrap_init.c
+compiling platform/mediatek/mt6572/lk/ddp_rdma.c
+compiling platform/mediatek/mt6572/lk/ddp_wdma.c
+compiling platform/mediatek/mt6572/lk/ddp_ovl.c
+compiling platform/mediatek/mt6572/lk/ddp_bls.c
+compiling platform/mediatek/mt6572/lk/ddp_path.c
+compiling platform/mediatek/mt6572/lk/env.c
+platform/mediatek/mt6572/lk/env.c: In function 'env_init':
+platform/mediatek/mt6572/lk/env.c:23:2: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  env_buffer = (char *)malloc(CFG_ENV_SIZE);
+  ^
+platform/mediatek/mt6572/lk/env.c:24:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(env_buffer,0x00,CFG_ENV_SIZE); 
+  ^
+platform/mediatek/mt6572/lk/env.c:30:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("[%s]read_env_area fail, ret = %x\n",MODULE_NAME,ret);
+   ^
+platform/mediatek/mt6572/lk/env.c:35:2: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  memcpy(g_env.sig,env_buffer,sizeof(g_env.sig));
+  ^
+platform/mediatek/mt6572/lk/env.c:38:2: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  if(!strcmp(g_env.sig,ENV_SIG) && !strcmp(g_env.sig_1,ENV_SIG)){  
+  ^
+platform/mediatek/mt6572/lk/env.c:40:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(i=0;i<(CFG_ENV_DATA_SIZE);i++){
+            ^
+platform/mediatek/mt6572/lk/env.c:21:8: warning: unused variable 'env_buf' [-Wunused-variable]
+  char *env_buf;
+        ^
+platform/mediatek/mt6572/lk/env.c: In function 'set_env':
+platform/mediatek/mt6572/lk/env.c:115:20: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  uchar *env_data = g_env.env_data;
+                    ^
+platform/mediatek/mt6572/lk/env.c:161:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  len = strlen(name) + 2;
+  ^
+platform/mediatek/mt6572/lk/env.c:110:8: warning: unused variable 'i' [-Wunused-variable]
+  int   i, len, oldval;
+        ^
+platform/mediatek/mt6572/lk/env.c: In function 'print_env':
+platform/mediatek/mt6572/lk/env.c:195:15: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  uchar *env = g_env.env_data;
+               ^
+platform/mediatek/mt6572/lk/env.c:203:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if (nxt >= (CFG_ENV_DATA_SIZE)) {
+            ^
+platform/mediatek/mt6572/lk/env.c: In function 'write_env_area':
+platform/mediatek/mt6572/lk/env.c:245:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(i=0;i<CFG_ENV_DATA_SIZE;i++){
+           ^
+compiling platform/mediatek/mt6572/lk/mt_battery.c
+In file included from include/debug.h:26:0,
+                 from include/printf.h:28,
+                 from platform/mediatek/mt6572/lk/mt_battery.c:18:
+include/assert.h:29:0: warning: "ASSERT" redefined [enabled by default]
+ #define ASSERT(x) \
+ ^
+In file included from platform/mediatek/mt6572/lk/mt_battery.c:13:0:
+platform/mediatek/mt6572/lk/include/platform/mt_disp_drv.h:59:0: note: this is the location of the previous definition
+ #define ASSERT(expr)                                                    \
+ ^
+compiling platform/mediatek/mt6572/lk/mt_kernel_power_off_charging.c
+compiling arch/arm/arch.c
+compiling arch/arm/asm.S
+compiling arch/arm/cache.c
+compiling arch/arm/ops.S
+compiling arch/arm/cache-ops.S
+compiling arch/arm/exceptions.S
+compiling arch/arm/faults.c
+compiling arch/arm/thread.c
+compiling arch/arm/mmu.c
+arch/arm/mmu.c: In function 'arm_mmu_init':
+arch/arm/mmu.c:76:11: warning: iteration 2048u invokes undefined behavior [-Waggressive-loop-optimizations]
+         i * MB,
+           ^
+arch/arm/mmu.c:74:2: note: containing loop
+  for (i=0; i < 4096; i++) {
+  ^
+compiling arch/arm/dcc.S
+compiling platform/debug.c
+compiling platform/init.c
+compiling target/init.c
+compiling target/target_display.c
+compiling kernel/debug.c
+compiling kernel/dpc.c
+compiling kernel/main.c
+compiling kernel/event.c
+compiling kernel/mutex.c
+compiling kernel/thread.c
+compiling kernel/timer.c
+compiling dev/dev.c
+compiling app/app.c
+compiling app/mt_boot/mt_boot.c
+compiling app/mt_boot/fastboot.c
+compiling app/mt_boot/sys_commands.c
+app/mt_boot/sys_commands.c: In function 'cmd_boot':
+app/mt_boot/sys_commands.c:212:8: warning: unused variable 'strlen' [-Wunused-variable]
+    int strlen = 0;
+        ^
+compiling app/mt_boot/download_commands.c
+compiling app/mt_boot/sparse_state_machine.c
+compiling app/mt_boot/sec_wrapper.c
+compiling app/mt_boot/aee/aee.c
+compiling app/mt_boot/aee/kdump_elf.c
+compiling app/mt_boot/aee/kdump_card_dump.c
+compiling app/mt_boot/aee/kdump_sd.c
+compiling app/mt_boot/aee/kdump_null.c
+compiling app/mt_boot/aee/kdump_zip.c
+compiling app/mt_boot/aee/deflate.c
+compiling app/mt_boot/aee/deftree.c
+compiling app/mt_boot/aee/mrdump_sddev.c
+compiling app/mt_boot/aee/reboot_record.c
+compiling app/shell/shell.c
+compiling dev/keys/keys.c
+compiling dev/video/cfb_console.c
+compiling lib/debug/debug.c
+compiling lib/heap/heap.c
+compiling lib/libc/atoi.c
+compiling lib/libc/ctype.c
+compiling lib/libc/printf.c
+compiling lib/libc/malloc.c
+compiling lib/libc/rand.c
+compiling lib/libc/eabi.c
+compiling lib/libc/string/arch/arm/memcpy.S
+compiling lib/libc/string/arch/arm/memset.S
+compiling lib/libc/string/memchr.c
+compiling lib/libc/string/memcmp.c
+compiling lib/libc/string/strcat.c
+compiling lib/libc/string/strchr.c
+compiling lib/libc/string/strcoll.c
+compiling lib/libc/string/strcmp.c
+compiling lib/libc/string/strdup.c
+compiling lib/libc/string/strcpy.c
+compiling lib/libc/string/strerror.c
+compiling lib/libc/string/strlcat.c
+compiling lib/libc/string/strlcpy.c
+compiling lib/libc/string/strlen.c
+compiling lib/libc/string/strncat.c
+compiling lib/libc/string/strncpy.c
+compiling lib/libc/string/strncmp.c
+compiling lib/libc/string/strnlen.c
+compiling lib/libc/string/strpbrk.c
+compiling lib/libc/string/strnicmp.c
+compiling lib/libc/string/strrchr.c
+compiling lib/libc/string/strspn.c
+compiling lib/libc/string/strstr.c
+compiling lib/libc/string/strtok.c
+compiling lib/libc/string/strxfrm.c
+compiling lib/libshowlogo/decompress_common.c
+compiling lib/libshowlogo/show_logo_common.c
+compiling lib/libshowlogo/show_animation_common.c
+compiling lib/ptable/ptable.c
+compiling lib/zlib/zlib.c
+compiling lib/zlib/crc32.c
+compiling out/lk/lcm/mt65xx_lcm_list.c
+compiling out/lk/lcm/tongxinta_ili9806e_wvga_dsi_vdo_mid4006.c
+compiling out/lk/partition.c
+out/lk/lcm/tongxinta_ili9806e_wvga_dsi_vdo_mid4006.c: In function 'lcm_set_util_funcs':
+out/lk/lcm/tongxinta_ili9806e_wvga_dsi_vdo_mid4006.c:261:2: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  memcpy(&lcm_util, util, sizeof(LCM_UTIL_FUNCS));
+  ^
+out/lk/lcm/tongxinta_ili9806e_wvga_dsi_vdo_mid4006.c: In function 'lcm_get_params':
+out/lk/lcm/tongxinta_ili9806e_wvga_dsi_vdo_mid4006.c:267:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(params, 0, sizeof(LCM_PARAMS));
+  ^
+out/lk/lcm/tongxinta_ili9806e_wvga_dsi_vdo_mid4006.c: In function 'lcm_compare_id':
+out/lk/lcm/tongxinta_ili9806e_wvga_dsi_vdo_mid4006.c:376:15: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  unsigned int id;
+               ^
+out/lk/partition.c:4:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_PRELOADER, PART_BLKS_PRELOADER, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:4:2: warning: (near initialization for 'partition_layout[0].name') [-Wpointer-sign]
+out/lk/partition.c:5:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_MBR, PART_BLKS_MBR, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:5:2: warning: (near initialization for 'partition_layout[1].name') [-Wpointer-sign]
+out/lk/partition.c:6:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_EBR1, PART_BLKS_EBR1, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:6:2: warning: (near initialization for 'partition_layout[2].name') [-Wpointer-sign]
+out/lk/partition.c:7:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_PRO_INFO, PART_BLKS_PRO_INFO, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:7:2: warning: (near initialization for 'partition_layout[3].name') [-Wpointer-sign]
+out/lk/partition.c:8:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_NVRAM, PART_BLKS_NVRAM, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:8:2: warning: (near initialization for 'partition_layout[4].name') [-Wpointer-sign]
+out/lk/partition.c:9:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_PROTECT_F, PART_BLKS_PROTECT_F, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:9:2: warning: (near initialization for 'partition_layout[5].name') [-Wpointer-sign]
+out/lk/partition.c:10:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_PROTECT_S, PART_BLKS_PROTECT_S, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:10:2: warning: (near initialization for 'partition_layout[6].name') [-Wpointer-sign]
+out/lk/partition.c:11:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_SECURE, PART_BLKS_SECURE, 0, PART_FLAG_NONE},
+  ^
+out/lk/partition.c:11:2: warning: (near initialization for 'partition_layout[7].name') [-Wpointer-sign]
+out/lk/partition.c:12:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_UBOOT, PART_BLKS_UBOOT, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:12:2: warning: (near initialization for 'partition_layout[8].name') [-Wpointer-sign]
+out/lk/partition.c:13:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_BOOTIMG, PART_BLKS_BOOTIMG, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:13:2: warning: (near initialization for 'partition_layout[9].name') [-Wpointer-sign]
+out/lk/partition.c:14:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_RECOVERY, PART_BLKS_RECOVERY, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:14:2: warning: (near initialization for 'partition_layout[10].name') [-Wpointer-sign]
+out/lk/partition.c:15:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_SECSTATIC, PART_BLKS_SECSTATIC, 0, PART_FLAG_NONE},
+  ^
+out/lk/partition.c:15:2: warning: (near initialization for 'partition_layout[11].name') [-Wpointer-sign]
+out/lk/partition.c:16:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_MISC, PART_BLKS_MISC, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:16:2: warning: (near initialization for 'partition_layout[12].name') [-Wpointer-sign]
+out/lk/partition.c:17:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_LOGO, PART_BLKS_LOGO, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:17:2: warning: (near initialization for 'partition_layout[13].name') [-Wpointer-sign]
+out/lk/partition.c:18:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_APANIC, PART_BLKS_APANIC, 0, PART_FLAG_NONE},
+  ^
+out/lk/partition.c:18:2: warning: (near initialization for 'partition_layout[14].name') [-Wpointer-sign]
+out/lk/partition.c:19:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_ANDSYSIMG, PART_BLKS_ANDSYSIMG, 0, PART_FLAG_NONE},
+  ^
+out/lk/partition.c:19:2: warning: (near initialization for 'partition_layout[15].name') [-Wpointer-sign]
+out/lk/partition.c:20:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_CACHE, PART_BLKS_CACHE, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:20:2: warning: (near initialization for 'partition_layout[16].name') [-Wpointer-sign]
+out/lk/partition.c:21:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_USER, PART_BLKS_USER, 0, PART_FLAG_NONE},
+  ^
+out/lk/partition.c:21:2: warning: (near initialization for 'partition_layout[17].name') [-Wpointer-sign]
+In file included from out/lk/partition.c:1:0:
+../../../out/target/product/ztenj72_we_72_kk/obj/PTGEN/common/partition_define.h:64:37: warning: integer overflow in expression [-Woverflow]
+ #define PART_SIZE_USRDATA   (2379776*KB)
+                                     ^
+../../../out/target/product/ztenj72_we_72_kk/obj/PTGEN/lk/inc/mt_partition.h:18:48: note: in definition of macro 'BLK_NUM'
+ #define BLK_NUM(size)    ((unsigned long long)(size) / BLK_SIZE)
+                                                ^
+../../../out/target/product/ztenj72_we_72_kk/obj/PTGEN/lk/inc/mt_partition.h:42:34: note: in expansion of macro 'PART_SIZE_USRDATA'
+ #define PART_BLKS_USER   BLK_NUM(PART_SIZE_USRDATA)
+                                  ^
+out/lk/partition.c:21:14: note: in expansion of macro 'PART_BLKS_USER'
+  {PART_USER, PART_BLKS_USER, 0, PART_FLAG_NONE},
+              ^
+out/lk/partition.c:22:2: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  {PART_FAT, PART_BLKS_FAT, PART_FLAG_NONE,0},
+  ^
+out/lk/partition.c:22:2: warning: (near initialization for 'partition_layout[18].name') [-Wpointer-sign]
+compiling out/lk/init.c
+compiling out/lk/cust_msdc.c
+compiling out/lk/cust_display.c
+compiling out/lk/cust_leds.c
+out/lk/cust_leds.c: In function 'custom_disp_bls_set_backlight':
+out/lk/cust_leds.c:28:2: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+  if(value < 0)
+  ^
+out/lk/cust_leds.c:32:2: warning: implicit declaration of function 'mdelay' [-Wimplicit-function-declaration]
+  mdelay(100);
+  ^
+out/lk/cust_leds.c:64:8: warning: implicit declaration of function 'udelay' [-Wimplicit-function-declaration]
+        udelay(1);
+        ^
+out/lk/cust_leds.c:19:16: warning: variable 'duty_mod' set but not used [-Wunused-but-set-variable]
+  unsigned long duty_mod= 0;
+                ^
+out/lk/cust_leds.c:18:16: warning: unused variable 'flags' [-Wunused-variable]
+  unsigned long flags;
+                ^
+out/lk/cust_leds.c:17:6: warning: unused variable 'err' [-Wunused-variable]
+  int err = 0xff;
+      ^
+compiling out/lk/power_off.c
+compiling out/lk/fastboot_oem_commands.c
+compiling lib/console/console.c
+linking ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk
+generating image: ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.bin
+generating listing: ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.lst
+generating listing: ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.debug.lst
+   text	   data	    bss	    dec	    hex	filename
+ 167236	  91760	 105204	 364200	  58ea8	../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk
+arm-linux-androideabi-objcopy -O binary ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.bin
+../../../mediatek/build/tools/mkimage ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.bin LK > ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk_header.bin
+generating symbols: ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.sym
+generating size map: ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.size
+../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/mkheader ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.bin ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/../../appsboothd.mbn
+Image Destination Pointer: 0x80020000
+Done execution
+cp ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.bin ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/../../appsboot.raw
+cat ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/../../appsboothd.mbn ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/lk.bin > ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/../../appsboot.mbn
+rm -f ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/../../appsboothd.mbn
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_uboot.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_uboot.raw out/lk/logo/wvga/wvga_uboot.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_battery.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_low_battery.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_battery.raw out/lk/logo/wvga/wvga_battery.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_low_battery.raw out/lk/logo/wvga/wvga_low_battery.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_charger_ov.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_charger_ov.raw out/lk/logo/wvga/wvga_charger_ov.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_0.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_0.raw out/lk/logo/wvga/wvga_num_0.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_1.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_1.raw out/lk/logo/wvga/wvga_num_1.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_3.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_3.raw out/lk/logo/wvga/wvga_num_3.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_2.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_2.raw out/lk/logo/wvga/wvga_num_2.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_4.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_4.raw out/lk/logo/wvga/wvga_num_4.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_5.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_5.raw out/lk/logo/wvga/wvga_num_5.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_7.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_7.raw out/lk/logo/wvga/wvga_num_7.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_6.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_6.raw out/lk/logo/wvga/wvga_num_6.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_8.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_8.raw out/lk/logo/wvga/wvga_num_8.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_percent.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_percent.raw out/lk/logo/wvga/wvga_num_percent.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_num_9.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_9.raw out/lk/logo/wvga/wvga_num_9.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_01.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_01.raw out/lk/logo/wvga/wvga_bat_animation_01.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_02.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_02.raw out/lk/logo/wvga/wvga_bat_animation_02.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_03.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_03.raw out/lk/logo/wvga/wvga_bat_animation_03.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_04.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_04.raw out/lk/logo/wvga/wvga_bat_animation_04.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_05.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_05.raw out/lk/logo/wvga/wvga_bat_animation_05.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_07.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_07.raw out/lk/logo/wvga/wvga_bat_animation_07.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_06.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_08.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_08.raw out/lk/logo/wvga/wvga_bat_animation_08.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_06.raw out/lk/logo/wvga/wvga_bat_animation_06.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_09.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_09.raw out/lk/logo/wvga/wvga_bat_animation_09.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_animation_10.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_10.raw out/lk/logo/wvga/wvga_bat_animation_10.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_02.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_01.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_01.raw out/lk/logo/wvga/wvga_bat_10_01.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_02.raw out/lk/logo/wvga/wvga_bat_10_02.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_03.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_03.raw out/lk/logo/wvga/wvga_bat_10_03.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_04.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_04.raw out/lk/logo/wvga/wvga_bat_10_04.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_05.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_05.raw out/lk/logo/wvga/wvga_bat_10_05.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_06.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_06.raw out/lk/logo/wvga/wvga_bat_10_06.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_07.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_07.raw out/lk/logo/wvga/wvga_bat_10_07.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_08.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_08.raw out/lk/logo/wvga/wvga_bat_10_08.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_09.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_09.raw out/lk/logo/wvga/wvga_bat_10_09.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_10_10.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_10.raw out/lk/logo/wvga/wvga_bat_10_10.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_bg.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_bg.raw out/lk/logo/wvga/wvga_bat_bg.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_img.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_img.raw out/lk/logo/wvga/wvga_bat_img.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_bat_100.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_100.raw out/lk/logo/wvga/wvga_bat_100.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_kernel.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_kernel.raw out/lk/logo/wvga/wvga_kernel.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_100.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_100.raw out/lk/logo/wvga/wvga_fast_charging_100.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_ani-01.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-01.raw out/lk/logo/wvga/wvga_fast_charging_ani-01.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_ani-02.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-02.raw out/lk/logo/wvga/wvga_fast_charging_ani-02.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_ani-03.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-03.raw out/lk/logo/wvga/wvga_fast_charging_ani-03.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_ani-04.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-04.raw out/lk/logo/wvga/wvga_fast_charging_ani-04.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_ani-05.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-05.raw out/lk/logo/wvga/wvga_fast_charging_ani-05.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_ani-06.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-06.raw out/lk/logo/wvga/wvga_fast_charging_ani-06.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_00.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_00.raw out/lk/logo/wvga/wvga_fast_charging_00.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_01.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_01.raw out/lk/logo/wvga/wvga_fast_charging_01.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_04.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_04.raw out/lk/logo/wvga/wvga_fast_charging_04.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_02.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_03.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_02.raw out/lk/logo/wvga/wvga_fast_charging_02.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_03.raw out/lk/logo/wvga/wvga_fast_charging_03.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_05.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_05.raw out/lk/logo/wvga/wvga_fast_charging_05.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_07.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_07.raw out/lk/logo/wvga/wvga_fast_charging_07.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_06.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_06.raw out/lk/logo/wvga/wvga_fast_charging_06.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_08.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_08.raw out/lk/logo/wvga/wvga_fast_charging_08.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_09.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_09.raw out/lk/logo/wvga/wvga_fast_charging_09.bmp
+Compiling_BMP_TO_RAW out/lk/logo/wvga/wvga_fast_charging_percent.bmp
+out/lk/logo/tool/bmp_to_raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_percent.raw out/lk/logo/wvga/wvga_fast_charging_percent.bmp
+zpiping 
+out/lk/logo/tool/zpipe -l 9 ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_uboot.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_battery.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_low_battery.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_charger_ov.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_0.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_1.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_2.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_3.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_4.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_5.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_6.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_7.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_8.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_9.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_num_percent.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_01.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_02.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_03.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_04.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_05.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_06.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_07.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_08.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_09.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_animation_10.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_01.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_02.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_03.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_04.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_05.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_06.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_07.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_08.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_09.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_10_10.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_bg.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_img.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_bat_100.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_kernel.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_100.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-01.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-02.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-03.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-04.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-05.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_ani-06.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_00.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_01.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_02.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_03.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_04.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_05.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_06.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_07.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_08.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_09.raw ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga/wvga_fast_charging_percent.raw
+MKING ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/logo.bin
+../../../mediatek/build/tools/mkimage ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/out/lk/logo/wvga.raw LOGO > ../../../out/target/product/ztenj72_we_72_kk/obj/BOOTLOADER_OBJ/build-ztenj72_we_72_kk/logo.bin
+[PARTITION_CHECK_RESULT] UBOOT have used %66.00 QUOTA
+Checking memory usage DONE!

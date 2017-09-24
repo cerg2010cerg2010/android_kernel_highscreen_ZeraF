@@ -1,0 +1,77 @@
+out/target/product/ztenj72_we_72_kk/obj/dep/emigen.dep: \
+		mediatek/build/tools/emigen/MT6572/emigen.pl \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Worksheet.pm \
+		/usr/share/perl5/core_perl/strict.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Format.pm \
+		/usr/lib/perl5/5.26/core_perl/Cwd.pm \
+		/usr/share/perl5/core_perl/warnings/register.pm \
+		/usr/lib/perl5/5.26/core_perl/Scalar/Util.pm \
+		/usr/lib/perl5/5.26/core_perl/Config.pm \
+		/usr/lib/perl5/5.26/core_perl/IO.pm \
+		/usr/share/perl5/core_perl/XSLoader.pm \
+		/usr/lib/perl5/5.26/core_perl/List/Util.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Cell.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Utility.pm \
+		/usr/share/perl5/core_perl/warnings.pm \
+		mediatek/build/tools/Spreadsheet/OLE/Storage_Lite.pm \
+		/usr/share/perl5/core_perl/Exporter.pm \
+		/usr/lib/perl5/5.26/core_perl/IO/Handle.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Font.pm \
+		/usr/share/perl5/core_perl/Symbol.pm \
+		/usr/lib/perl5/5.26/core_perl/POSIX.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/FmtDefault.pm \
+		/usr/lib/perl5/5.26/core_perl/IO/Seekable.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Workbook.pm \
+		/usr/share/perl5/core_perl/constant.pm \
+		/usr/share/perl5/core_perl/vars.pm \
+		/usr/lib/perl5/5.26/core_perl/lib.pm \
+		/usr/share/perl5/core_perl/Time/Local.pm \
+		/usr/lib/perl5/5.26/core_perl/IO/File.pm \
+		/usr/share/perl5/core_perl/Tie/Hash.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel.pm \
+		/usr/lib/perl5/5.26/core_perl/Fcntl.pm \
+		/usr/share/perl5/core_perl/parent.pm \
+		/usr/share/perl5/core_perl/SelectSaver.pm \
+		/usr/share/perl5/core_perl/Carp.pm \
+		mediatek/build/tools/pack_dep_gen.pm \
+		mediatek/custom/ztenj72_we_72_kk/preloader/inc/custom_MemoryDevice.h \
+		mediatek/build/tools/emigen/MT6572/MemoryDeviceList_MT6572.xls
+
+mediatek/build/tools/emigen/MT6572/emigen.pl:
+mediatek/build/tools/Spreadsheet/ParseExcel/Worksheet.pm:
+/usr/share/perl5/core_perl/strict.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Format.pm:
+/usr/lib/perl5/5.26/core_perl/Cwd.pm:
+/usr/share/perl5/core_perl/warnings/register.pm:
+/usr/lib/perl5/5.26/core_perl/Scalar/Util.pm:
+/usr/lib/perl5/5.26/core_perl/Config.pm:
+/usr/lib/perl5/5.26/core_perl/IO.pm:
+/usr/share/perl5/core_perl/XSLoader.pm:
+/usr/lib/perl5/5.26/core_perl/List/Util.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Cell.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Utility.pm:
+/usr/share/perl5/core_perl/warnings.pm:
+mediatek/build/tools/Spreadsheet/OLE/Storage_Lite.pm:
+/usr/share/perl5/core_perl/Exporter.pm:
+/usr/lib/perl5/5.26/core_perl/IO/Handle.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Font.pm:
+/usr/share/perl5/core_perl/Symbol.pm:
+/usr/lib/perl5/5.26/core_perl/POSIX.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/FmtDefault.pm:
+/usr/lib/perl5/5.26/core_perl/IO/Seekable.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Workbook.pm:
+/usr/share/perl5/core_perl/constant.pm:
+/usr/share/perl5/core_perl/vars.pm:
+/usr/lib/perl5/5.26/core_perl/lib.pm:
+/usr/share/perl5/core_perl/Time/Local.pm:
+/usr/lib/perl5/5.26/core_perl/IO/File.pm:
+/usr/share/perl5/core_perl/Tie/Hash.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel.pm:
+/usr/lib/perl5/5.26/core_perl/Fcntl.pm:
+/usr/share/perl5/core_perl/parent.pm:
+/usr/share/perl5/core_perl/SelectSaver.pm:
+/usr/share/perl5/core_perl/Carp.pm:
+mediatek/build/tools/pack_dep_gen.pm:
+mediatek/custom/ztenj72_we_72_kk/preloader/inc/custom_MemoryDevice.h:
+mediatek/build/tools/emigen/MT6572/MemoryDeviceList_MT6572.xls:
+

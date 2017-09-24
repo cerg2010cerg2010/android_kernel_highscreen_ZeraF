@@ -1,0 +1,89 @@
+out/target/product/ztenj72_we_72_kk/obj/dep/ptgen.dep: \
+		mediatek/build/tools/ptgen/MT6572/ptgen.pl \
+		/usr/lib/perl5/5.26/core_perl/Config.pm \
+		/usr/lib/perl5/5.26/core_perl/IO/File.pm \
+		/usr/lib/perl5/5.26/core_perl/List/Util.pm \
+		/usr/lib/perl5/5.26/core_perl/Fcntl.pm \
+		/usr/share/perl5/core_perl/Tie/Hash.pm \
+		/usr/lib/perl5/5.26/core_perl/IO/Seekable.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Worksheet.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/FmtDefault.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Format.pm \
+		/usr/share/perl5/core_perl/XSLoader.pm \
+		/usr/share/perl5/core_perl/strict.pm \
+		/usr/share/perl5/core_perl/warnings/register.pm \
+		/usr/share/perl5/core_perl/Time/Local.pm \
+		/usr/share/perl5/core_perl/constant.pm \
+		/usr/share/perl5/core_perl/Exporter.pm \
+		/usr/lib/perl5/5.26/core_perl/lib.pm \
+		mediatek/build/tools/Spreadsheet/OLE/Storage_Lite.pm \
+		/usr/lib/perl5/5.26/core_perl/File/Spec/Unix.pm \
+		/usr/share/perl5/core_perl/parent.pm \
+		/usr/share/perl5/core_perl/Carp.pm \
+		/usr/lib/perl5/5.26/core_perl/File/Spec.pm \
+		/usr/lib/perl5/5.26/core_perl/IO/Handle.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Font.pm \
+		/usr/lib/perl5/5.26/core_perl/IO.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Workbook.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Utility.pm \
+		/usr/lib/perl5/5.26/core_perl/POSIX.pm \
+		/usr/share/perl5/core_perl/File/Path.pm \
+		/usr/lib/perl5/5.26/core_perl/Cwd.pm \
+		/usr/share/perl5/core_perl/Symbol.pm \
+		mediatek/build/tools/Spreadsheet/ParseExcel/Cell.pm \
+		/usr/share/perl5/core_perl/File/Basename.pm \
+		/usr/share/perl5/core_perl/SelectSaver.pm \
+		/usr/lib/perl5/5.26/core_perl/Scalar/Util.pm \
+		/usr/share/perl5/core_perl/warnings.pm \
+		/usr/share/perl5/core_perl/vars.pm \
+		mediatek/build/tools/pack_dep_gen.pm \
+		mediatek/build/tools/emigen/MT6572/MemoryDeviceList_MT6572.xls \
+		mediatek/custom/ztenj72_we_72_kk/preloader/inc/custom_MemoryDevice.h \
+		mediatek/config/ztenj72_we_72_kk/mbr_addr.pl \
+		mediatek/build/tools/ptgen/MT6572/partition_table_MT6572.xls
+
+mediatek/build/tools/ptgen/MT6572/ptgen.pl:
+/usr/lib/perl5/5.26/core_perl/Config.pm:
+/usr/lib/perl5/5.26/core_perl/IO/File.pm:
+/usr/lib/perl5/5.26/core_perl/List/Util.pm:
+/usr/lib/perl5/5.26/core_perl/Fcntl.pm:
+/usr/share/perl5/core_perl/Tie/Hash.pm:
+/usr/lib/perl5/5.26/core_perl/IO/Seekable.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Worksheet.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/FmtDefault.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Format.pm:
+/usr/share/perl5/core_perl/XSLoader.pm:
+/usr/share/perl5/core_perl/strict.pm:
+/usr/share/perl5/core_perl/warnings/register.pm:
+/usr/share/perl5/core_perl/Time/Local.pm:
+/usr/share/perl5/core_perl/constant.pm:
+/usr/share/perl5/core_perl/Exporter.pm:
+/usr/lib/perl5/5.26/core_perl/lib.pm:
+mediatek/build/tools/Spreadsheet/OLE/Storage_Lite.pm:
+/usr/lib/perl5/5.26/core_perl/File/Spec/Unix.pm:
+/usr/share/perl5/core_perl/parent.pm:
+/usr/share/perl5/core_perl/Carp.pm:
+/usr/lib/perl5/5.26/core_perl/File/Spec.pm:
+/usr/lib/perl5/5.26/core_perl/IO/Handle.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Font.pm:
+/usr/lib/perl5/5.26/core_perl/IO.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Workbook.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Utility.pm:
+/usr/lib/perl5/5.26/core_perl/POSIX.pm:
+/usr/share/perl5/core_perl/File/Path.pm:
+/usr/lib/perl5/5.26/core_perl/Cwd.pm:
+/usr/share/perl5/core_perl/Symbol.pm:
+mediatek/build/tools/Spreadsheet/ParseExcel/Cell.pm:
+/usr/share/perl5/core_perl/File/Basename.pm:
+/usr/share/perl5/core_perl/SelectSaver.pm:
+/usr/lib/perl5/5.26/core_perl/Scalar/Util.pm:
+/usr/share/perl5/core_perl/warnings.pm:
+/usr/share/perl5/core_perl/vars.pm:
+mediatek/build/tools/pack_dep_gen.pm:
+mediatek/build/tools/emigen/MT6572/MemoryDeviceList_MT6572.xls:
+mediatek/custom/ztenj72_we_72_kk/preloader/inc/custom_MemoryDevice.h:
+mediatek/config/ztenj72_we_72_kk/mbr_addr.pl:
+mediatek/build/tools/ptgen/MT6572/partition_table_MT6572.xls:
+
